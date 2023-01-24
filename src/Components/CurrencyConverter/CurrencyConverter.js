@@ -46,34 +46,36 @@ function CurrencyConverter() {
   };
 
   return (
-    <div className='currency-converter'>
-      <div className='currency-converter-container'>
-        <label className='label'>Amount</label>
-        <input
-          type="number"
-          value={amount}
-          onChange={handleAmountChange}
-          placeholder="Enter amount to convert"
-          className='currency-input input'
-        />
-        <label className='label'>Form</label>
-        <select value={fromCurrency} onChange={handleFromCurrencyChange} className='currency-from-select input'>
-          {Object.keys(currencies).map((code) => (
-            <option key={code} value={code} className='currency-from-option'>
-              {currencies[code]}
-            </option>
-          ))}
-        </select>
-        <label className='label'>To</label>
-        <select value={toCurrency} onChange={handleToCurrencyChange} className='currency-to-select input'>
-          {Object.keys(currencies).map((code) => (
-            <option key={code} value={code} className='currency-to-option'>
-              {currencies[code]}
-            </option>
-          ))}
-        </select>
-        <button onClick={handleConvert} className='convert-button'>Convert</button>
-        <p className='currency-output'>{convertedAmount} {toCurrency}</p>
+    <div className='container'>
+      <div className='currency-converter'>
+        <div className='currency-converter-container'>
+          <label className='label'>Amount</label>
+          <input
+            type="number"
+            value={amount}
+            onChange={handleAmountChange}
+            placeholder="Enter amount to convert"
+            className='currency-input input'
+          />
+          <label className='label'>Form</label>
+          <select value={fromCurrency} onChange={handleFromCurrencyChange} className='currency-from-select input'>
+            {Object.keys(currencies).map((code) => (
+              <option key={code} value={code} className='currency-from-option'>
+                {currencies[code]}
+              </option>
+            ))}
+          </select>
+          <label className='label'>To</label>
+          <select value={toCurrency} onChange={handleToCurrencyChange} className='currency-to-select input'>
+            {Object.keys(currencies).map((code) => (
+              <option key={code} value={code} className='currency-to-option'>
+                {currencies[code]}
+              </option>
+            ))}
+          </select>
+          <button onClick={handleConvert} className='convert-button'>Convert</button>
+          <p className='currency-output'>{convertedAmount} {toCurrency}</p>
+        </div>
       </div>
     </div>
   );

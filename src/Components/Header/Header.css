@@ -3,6 +3,7 @@
     height: 50px;
     background: white;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+    position: fixed;
 }
 
 .header {
