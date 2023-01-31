@@ -57,7 +57,7 @@ function CurrencyConverter() {
             placeholder="Enter amount to convert"
             className='currency-input input'
           />
-          <label className='label'>Form</label>
+          <label className='label'>From</label>
           <select value={fromCurrency} onChange={handleFromCurrencyChange} className='currency-from-select input'>
             {Object.keys(currencies).map((code) => (
               <option key={code} value={code} className='currency-from-option'>
